@@ -1,8 +1,9 @@
 import React from 'react';
 import Store from './store/basicstore/BasicStore'
 import UsernameDisplayer from './components/usernamedisplayer/UsernameDisplayer'
-import SetUsername from './containers/setusername/SetUsername'
-import UsernameUpdater from './containers/usernameupdater/UsernameUpdater'
+import UsernameComponent from './components/usernamecomponent/UsernameComponent'
+import UsernameWithReduxToolkit from './containers/usernamewithreduxtoolkit/UsernameWithReduxToolkit'
+import UsernameWithAuthSlice from './components/usernamewithauthslice/UsernameWithAuthSlice'
 import './App.css';
 
 
@@ -11,10 +12,15 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Store>
+          <p>Username with auth slice</p>
+          <UsernameWithAuthSlice></UsernameWithAuthSlice>
+          <p>Username with redux toolkit</p>
+          <UsernameWithReduxToolkit></UsernameWithReduxToolkit>
           <p>Basic react app to test useReducer and useContext hooks</p>
-          <UsernameUpdater />
+          {/* <UsernameUpdater /> */}
           <UsernameDisplayer></UsernameDisplayer>
-          <SetUsername />
+          {/* <SetUsername /> */}
+          <UsernameComponent/>
         </Store>
       </header>
     </div>
